@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+    <body>
+        <center>
+            <h1>My Family Book</h1>
+            <img id="img1" src="family image.jpg" style="width:300px; height:500px;">
+            <p id="p1">My Family Book</p>
+            <br>
+            <button onclick="next()">Next</button>
+        </center>
+        <script>
+            var people=["Mother","Father","Younger Sister","Myself"];
+            var arrayimage=["mom image.jpg","Dad image.png","sister image.png","my image.webp"];
+            var i=0;
+            function next(){
+                document.getElementById("img1").src=arrayimage[i];
+                document.getElementById("p1").innerHTML=people[i];
+                i++;
+                if (i>3){
+                    i=0;
+                }
+            }
+        </script>
+    </body>
+</html>
